@@ -116,6 +116,30 @@ h2 { margin: 0; font: 400 clamp(28px, 3.6vw, 37px)/1.25 "DM Serif Display", Geor
 .results-table .ours th { font-weight: 700; }
 .results-table tbody tr:last-child > * { border-bottom: 0; }
 .table-note { text-align: center; font-size: 10px; color: var(--light); margin: 15px auto 8px; max-width: 850px; }
+.benchmark-table { min-width: 1000px; table-layout: fixed; }
+.benchmark-table thead th[rowspan]:first-child { width: 180px; position: sticky; left: 0; z-index: 2; box-shadow: 1px 0 0 #e5e9ee; }
+.benchmark-table thead th { font-weight: 600; }
+.benchmark-table tbody tr:last-child > * { border-bottom: 1px solid #e5e9ee; }
+.benchmark-table tbody:last-child tr:last-child > * { border-bottom: 0; }
+.benchmark-table .model-group th { padding: 10px 12px; background: #edf2f6; color: #40566d; font-size: 11px; font-weight: 600; letter-spacing: .1px; }
+.benchmark-table .model-group span { display: inline-block; position: sticky; left: 12px; }
+.benchmark-table tbody tr:not(.model-group) > th { position: sticky; left: 0; z-index: 1; background: #fff; box-shadow: 1px 0 0 #e5e9ee; }
+.benchmark-table tbody tr.ours > th { background: #eaf5ef; }
+.benchmark-table strong { font-weight: 700; }
+.second-best { text-decoration: underline; text-underline-offset: 3px; }
+.table-scroll-hint { display: none; margin: 8px 0 0; font-size: 11px; text-align: center; color: var(--muted); }
+.result-observations { margin: 32px 0 10px; padding-top: 27px; border-top: 1px solid var(--line); }
+.result-observations h3 { margin: 0 0 5px; color: var(--ink); font-size: 19px; font-weight: 600; }
+.observations-intro { margin: 0 0 21px; color: var(--light); font-size: 12px; }
+.observation-list { list-style: none; counter-reset: observation; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin: 0; padding: 0; }
+.observation-list li { counter-increment: observation; }
+.observation-list li::before { content: "0" counter(observation); display: block; margin-bottom: 8px; color: var(--green); font-size: 11px; font-weight: 600; letter-spacing: 1.2px; }
+.observation-list h4 { margin: 0 0 9px; font-size: 14px; font-weight: 600; }
+.observation-list p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.observation-list strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 1100px) {
+  .table-scroll-hint { display: block; }
+}
 .transfer-table { margin-top: 32px; font-size: 13px; }
 .transfer-table th, .transfer-table td { padding: 18px 15px; }
 .transfer-table thead th { font-size: 11px; }
@@ -164,6 +188,10 @@ body.dialog-open { overflow: hidden; }
   .method-details > div { grid-template-columns: 1fr; gap: 7px; padding: 17px 4px; }
   .section-intro { font-size: 14px; }
   .results-tabs { padding-inline: 16px; }
+  .observation-list { grid-template-columns: 1fr; gap: 22px; }
+  .observation-list li + li { padding-top: 20px; border-top: 1px solid var(--line); }
+  .result-observations { margin-top: 25px; }
+  .benchmark-table thead th[rowspan]:first-child { width: 165px; }
   .citation-section { padding-bottom: 60px; }
 }
 @media (max-width: 460px) {
