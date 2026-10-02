@@ -148,6 +148,9 @@ h2 { margin: 0; font: 400 clamp(28px, 3.6vw, 37px)/1.25 "DM Serif Display", Geor
 .insight-value-wide { font-size: 34px; line-height: 1.39; }
 .insight-value-wide span { font-size: 20px; }
 .insight-metric-label { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+.insight-focus { min-height: 120px; margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--insight-line); }
+.insight-focus > span { display: block; margin-bottom: 7px; color: var(--insight-accent); font-size: 9px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+.insight-focus p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
 .insight-copy { margin: 0 0 22px; color: var(--muted); font-size: 12px; line-height: 1.85; }
 .insight-copy strong { color: var(--ink); font-weight: 600; }
 .insight-footer { margin: auto 0 0; padding-top: 13px; border-top: 1px solid var(--insight-line); color: var(--insight-accent); font-size: 10px; line-height: 1.7; }
@@ -217,8 +220,8 @@ body.dialog-open { overflow: hidden; }
   .result-observations { margin-top: 25px; padding-top: 25px; }
   .insight-card { padding: 23px; }
   .insight-card h4 { min-height: 0; font-size: 25px; }
-  .insight-metric { min-height: 0; }
-  .insight-copy { font-size: 13px; }
+  .insight-metric, .insight-focus { min-height: 0; }
+  .insight-copy, .insight-focus p { font-size: 13px; }
   .insight-metric-label, .insight-footer { font-size: 11px; }
   .benchmark-table thead th[rowspan]:first-child { width: 165px; }
   .citation-section { padding-bottom: 60px; }
