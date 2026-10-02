@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8fb">
+  <title>SpatialMind — From Sight to Foresight</title>
+  <meta name="description" content="SpatialMind: metric-scale spatial reasoning and future prediction in vision-language models. From current spatial states and observed dynamics to unseen future frames.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SpatialMind — From Sight to Foresight">
+  <meta property="og:description" content="Predictive Spatial Reasoning in Vision-Language Models">
+  <meta property="og:url" content="https://brack-wang.github.io/spatialmind/">
+  <meta property="og:image" content="https://brack-wang.github.io/spatialmind/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://brack-wang.github.io/spatialmind/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="wordmark" href="#top" aria-label="SpatialMind, back to top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>SpatialMind</a>
+      <nav aria-label="Main navigation">
+        <a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#data">Data</a><a href="#results">Results</a><a href="#citation">Cite</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="paper-title">
+      <p class="eyebrow">FROM OBSERVATION TO PREDICTION</p>
+      <h1 id="paper-title"><span class="project-name">SpatialMind</span><span class="paper-title">From Sight to Foresight:<br>Predictive Spatial Reasoning<br class="desktop-break"> in Vision-Language Models</span></h1>
+      <div class="authors" aria-label="Authors">
+        <span><a href="https://openreview.net/profile?id=~Feiran_Wang2">Feiran Wang</a><sup>1,†</sup></span>
+        <span><a href="https://openreview.net/profile?id=~Xiaoqi_Wang2">Xiaoqi Wang</a><sup>2,‡</sup></span>
+        <span><a href="https://openreview.net/profile?id=~Ziwei_Li3">Ziwei Li</a><sup>2</sup></span>
+        <span><a href="https://openreview.net/profile?id=~Wenbin_He1">Wenbin He</a><sup>2</sup></span>
+        <span><a href="https://openreview.net/profile?id=~Yan_Yan6">Yan Yan</a><sup>1</sup></span>
+        <span><a href="https://openreview.net/profile?id=~Liu_Ren1">Liu Ren</a><sup>2</sup></span>
+      </div>
+      <div class="affiliations"><span><sup>1</sup> University of Illinois at Chicago</span><span><sup>2</sup> Bosch</span></div>
+      <p class="author-notes"><span>† This work was done during an internship at Bosch.</span><span>‡ Project lead.</span></p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/Brack-Wang/spatialmind"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.12.68-3.78-1.33-3.78-1.33-.51-1.3-1.25-1.64-1.25-1.64-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.4-1.22.71-1.5-2.49-.28-5.11-1.24-5.11-5.53 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.54.23 2.68.11 2.96.72.78 1.16 1.78 1.16 3 0 4.3-2.62 5.24-5.12 5.52.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg>GitHub <span aria-hidden="true">↗</span></a>
+        <a class="button button-secondary" href="#abstract">Explore the research <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="release-note"><span aria-hidden="true"></span>Paper, code &amp; data coming soon</p>
+      <p class="tldr"><strong>TL;DR</strong> Ground spatial reasoning in <em>metric geometry</em>, understand <em>observed dynamics</em>, and anticipate <em>what comes next</em>.</p>
+    </section>
+
+    <div class="container">
+      <figure class="figure-block hero-figure">
+        <a class="figure-frame" href="teaser.png" data-lightbox aria-label="Enlarge the SpatialMind overview"><img src="teaser.png" width="2400" height="1398" alt="SpatialMind reasons from a current distance estimate through observed motion to future distance prediction. A driving example and an eight-task benchmark comparison illustrate the approach." fetchpriority="high"></a>
+        <figcaption><strong>From sight to foresight.</strong> SpatialMind connects current spatial states, observed dynamics, and future prediction in a shared reasoning framework.</figcaption>
+      </figure>
+    </div>
+
+    <section class="section container" id="abstract" aria-labelledby="abstract-title">
+      <div class="section-heading"><span class="section-label">01 / OVERVIEW</span><h2 id="abstract-title">Abstract</h2></div>
+      <div class="paper-panel abstract-text">
+        <p>Predicting future spatial states supports collision avoidance and timely decision-making in dynamic environments. However, existing vision-language models (VLMs) and benchmarks for spatial reasoning primarily focus on observed scenes, leaving predictive spatial reasoning beyond the observed interval underexplored. To this end, we introduce <strong>SpatialMind</strong>, a metric-scale VLM for spatial reasoning and future prediction. Its metric depth adapter anchors spatial reasoning to real-world scale, while its progressive state chain establishes current spatial states and observed dynamics as the foundation for future prediction.</p>
+        <p>Given a video prefix, SpatialMind predicts distances, motion directions, and spatial relations in both observed and unseen future frames. For training and evaluation, we build a scalable data engine that grounds entity descriptions in metric geometry to generate question-answer pairs and state supervision. Using this engine, we construct the <strong>SpatialMind-30K</strong> dataset and the <strong>SpatialMind-2K</strong> benchmark, both covering driving and everyday egocentric scenes. The benchmark spans eight tasks across three levels: current-state understanding, observed-dynamics understanding, and future prediction. Experiments show that SpatialMind substantially outperforms both general and spatially specialized models on our benchmark while achieving competitive zero-shot performance on VSI-Bench, OSI-Bench, and VLM4D.</p>
+      </div>
+      <ol class="reasoning-levels">
+        <li><span class="level-index">L1</span><h3>Current state</h3><p>Where are things now?</p><span>Motion &amp; spatial state</span></li>
+        <li><span class="level-index">L2</span><h3>Observed dynamics</h3><p>How are things changing?</p><span>Motion distance &amp; relative motion</span></li>
+        <li><span class="level-index">L3</span><h3>Future prediction</h3><p>What happens next?</p><span>Future direction, distance &amp; relation</span></li>
+      </ol>
+    </section>
+
+    <section class="section container" id="method" aria-labelledby="method-title">
+      <div class="section-heading"><span class="section-label">02 / APPROACH</span><h2 id="method-title">Grounded in geometry.<br>Reasoning through time.</h2></div>
+      <p class="section-intro">An observed RGB video and a spatial question are the starting point. Metric geometry provides scale; a progressive state chain connects the evidence to the answer.</p>
+      <figure class="figure-block">
+        <a class="figure-frame" href="model.png" data-lightbox aria-label="Enlarge the model architecture"><img src="model.png" width="2800" height="1083" loading="lazy" alt="SpatialMind architecture with metric depth refinement, separate geometry and motion encoders, anchor time alignment, visual-geometry fusion, and progressive state-chain reasoning."></a>
+        <figcaption><strong>Model architecture.</strong> Global and local depth corrections, temporal geometry fusion, and structured reasoning connect video observations to metric spatial predictions.</figcaption>
+      </figure>
+      <dl class="method-details">
+        <div><dt><span>01</span> Metric depth adaptation</dt><dd>Refine depth estimates using multiview geometry, with global alignment and local corrections that anchor spatial features to real-world scale.</dd></div>
+        <div><dt><span>02</span> Temporal geometry fusion</dt><dd>Encode geometry and camera motion separately, align their features in time, and fuse them into the RGB visual tokens through cross-attention.</dd></div>
+        <div><dt><span>03</span> Progressive state chains</dt><dd>Ground the target, establish its current state, and reason through observed dynamics to a future prediction. Future frames are withheld from model inputs.</dd></div>
+      </dl>
+    </section>
+
+    <section class="section container" id="data" aria-labelledby="data-title">
+      <div class="section-heading"><span class="section-label">03 / DATA &amp; BENCHMARK</span><h2 id="data-title">Eight tasks. Two worlds.</h2></div>
+      <p class="section-intro">Driving scenes and everyday egocentric activities, organized into a common hierarchy of spatial reasoning.</p>
+      <div class="dataset-stats"><div><strong>30,677</strong><span>Training QA pairs</span></div><div><strong>2,000</strong><span>Benchmark questions</span></div><div><strong>8</strong><span>Tasks across 3 levels</span></div></div>
+      <figure class="figure-block">
+        <a class="figure-frame" href="data-engine.png" data-lightbox aria-label="Enlarge the data engine"><img src="data-engine.png" width="2800" height="1257" loading="lazy" alt="The SpatialMind data engine links target selection and verified entity descriptions to metric geometry, temporal spatial metadata, and question-answer generation across eight tasks."></a>
+        <figcaption><strong>SpatialMind data engine.</strong> A Select–Describe–Verify process grounds natural-language descriptions in metric geometry. Semantic propagation and temporal alignment support question generation and state-chain supervision from Waymo and Ego-Exo4D videos.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section container" id="results" aria-labelledby="results-title">
+      <div class="section-heading"><span class="section-label">04 / EVALUATION</span><h2 id="results-title">Results</h2></div>
+      <p class="section-intro">SpatialMind improves predictive spatial reasoning on SpatialMind-2K and transfers to three external benchmarks without additional fine-tuning.</p>
+      <div class="results-tabs" data-tabs>
+        <div class="tab-list" role="tablist" aria-label="Evaluation benchmark">
+          <button role="tab" id="tab-spatialmind" aria-controls="panel-spatialmind" aria-selected="true" tabindex="0">SpatialMind-2K</button>
+          <button role="tab" id="tab-transfer" aria-controls="panel-transfer" aria-selected="false" tabindex="-1">Zero-shot transfer</button>
+        </div>
+        <div id="panel-spatialmind" role="tabpanel" aria-labelledby="tab-spatialmind" tabindex="0">
+          <div class="result-summary"><p><strong>52.65<span>%</span></strong> overall score</p><p><strong>+6.95<span> pp</span></strong> over Qwen3-VL-8B + SFT</p></div>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="SpatialMind-2K results, scroll horizontally for all tasks">
+            <table class="results-table"><caption>Selected results on SpatialMind-2K (%)</caption><thead><tr><th scope="col" rowspan="2">Model</th><th scope="col" rowspan="2">Overall</th><th scope="colgroup" colspan="2">L1 · Current state</th><th scope="colgroup" colspan="3">L2 · Observed dynamics</th><th scope="colgroup" colspan="3">L3 · Future prediction</th></tr><tr><th scope="col">Motion</th><th scope="col">Spatial</th><th scope="col">Ego dist.</th><th scope="col">Target dist.</th><th scope="col">Relative</th><th scope="col">Direction</th><th scope="col">Distance</th><th scope="col">Relation</th></tr></thead><tbody>
+              <tr><th scope="row">Qwen3-VL-8B</th><td>20.20</td><td>3.15</td><td>13.30</td><td>7.35</td><td>23.10</td><td>38.50</td><td>24.50</td><td>21.00</td><td>34.70</td></tr>
+              <tr><th scope="row">Qwen3-VL-8B + SFT</th><td>45.70</td><td>36.02</td><td>57.34</td><td>23.77</td><td>37.06</td><td>56.99</td><td>57.34</td><td>40.64</td><td>57.89</td></tr>
+              <tr class="ours"><th scope="row">SpatialMind</th><td>52.65</td><td>38.32</td><td>65.46</td><td>30.15</td><td>52.34</td><td>68.42</td><td>65.13</td><td>42.89</td><td>64.48</td></tr>
+            </tbody></table>
+          </div>
+          <p class="table-note">Numerical tasks use mean relative accuracy (MRA); multiple-choice tasks use accuracy (ACC), following the paper’s evaluation protocol.</p>
+        </div>
+        <div id="panel-transfer" role="tabpanel" aria-labelledby="tab-transfer" tabindex="0" hidden>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Zero-shot transfer results">
+            <table class="results-table transfer-table"><caption>SpatialMind: zero-shot evaluation on external benchmarks (%)</caption><thead><tr><th scope="col">Benchmark</th><th scope="col">Average / Overall</th><th scope="col">Breakdown</th></tr></thead><tbody>
+              <tr><th scope="row">VSI-Bench</th><td class="score">46.4</td><td>Measurement: 52.1 · Spatiotemporal: 52.4</td></tr>
+              <tr><th scope="row">OSI-Bench</th><td class="score">35.0</td><td>Static: 30.2 · Dynamic: 33.4</td></tr>
+              <tr><th scope="row">VLM4D</th><td class="score">53.4</td><td>Real: 53.5 · Synthetic: 52.9</td></tr>
+            </tbody></table>
+          </div>
+          <p class="table-note">Each benchmark retains its original scoring convention. Scores across different benchmarks are not directly comparable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container citation-section" id="citation" aria-labelledby="citation-title">
+      <div class="section-heading"><span class="section-label">05 / REFERENCE</span><h2 id="citation-title">BibTeX</h2></div>
+      <div class="citation-box"><div class="citation-bar"><span>SpatialMind</span><button class="copy-button" id="copy-citation" type="button">Copy BibTeX</button></div><pre><code id="bibtex">@misc{wang2026spatialmind,
+  title={From Sight to Foresight: Predictive Spatial Reasoning
+         in Vision-Language Models},
+  author={Wang, Feiran and Wang, Xiaoqi and Li, Ziwei and
+          He, Wenbin and Yan, Yan and Ren, Liu},
+  year={2026},
+  url={https://brack-wang.github.io/spatialmind/}
+}</code></pre><p id="copy-status" class="copy-status" role="status" aria-live="polite"></p></div>
+    </section>
+  </main>
+  <footer><a class="wordmark" href="#top">SpatialMind</a><p>From sight to foresight.</p><div><span>© 2026 SpatialMind</span><a href="https://github.com/Brack-Wang/spatialmind">GitHub ↗</a></div></footer>
+  <dialog id="figure-dialog" aria-labelledby="figure-dialog-title"><div class="dialog-bar"><h2 id="figure-dialog-title">Figure preview</h2><button type="button" id="close-figure" aria-label="Close figure preview">×</button></div><img id="expanded-figure" alt=""><p id="expanded-caption"></p></dialog>
+</body>
+</html>
