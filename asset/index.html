@@ -10,15 +10,15 @@
   <meta property="og:title" content="SpatialMind — From Sight to Foresight">
   <meta property="og:description" content="Predictive Spatial Reasoning in Vision-Language Models">
   <meta property="og:url" content="https://brack-wang.github.io/spatialmind/">
-  <meta property="og:image" content="https://brack-wang.github.io/spatialmind/assets/teaser.png">
+  <meta property="og:image" content="https://brack-wang.github.io/spatialmind/teaser.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://brack-wang.github.io/spatialmind/">
-  <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/style.css">
-  <script src="static/site.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -55,7 +55,7 @@
 
     <div class="container">
       <figure class="figure-block hero-figure">
-        <a class="figure-frame" href="assets/teaser.png" data-lightbox aria-label="Enlarge the SpatialMind overview"><img src="assets/teaser.png" width="2400" height="1398" alt="SpatialMind reasons from a current distance estimate through observed motion to future distance prediction. A driving example and an eight-task benchmark comparison illustrate the approach." fetchpriority="high"></a>
+        <a class="figure-frame" href="teaser.png" data-lightbox aria-label="Enlarge the SpatialMind overview"><img src="teaser.png" width="2400" height="1398" alt="SpatialMind reasons from a current distance estimate through observed motion to future distance prediction. A driving example and an eight-task benchmark comparison illustrate the approach." fetchpriority="high"></a>
         <figcaption><strong>From sight to foresight.</strong> SpatialMind connects current spatial states, observed dynamics, and future prediction in a shared reasoning framework.</figcaption>
       </figure>
     </div>
@@ -77,7 +77,7 @@
       <div class="section-heading"><span class="section-label">02 / APPROACH</span><h2 id="method-title">Grounded in geometry.<br>Reasoning through time.</h2></div>
       <p class="section-intro">An observed RGB video and a spatial question are the starting point. Metric geometry provides scale; a progressive state chain connects the evidence to the answer.</p>
       <figure class="figure-block">
-        <a class="figure-frame" href="assets/model.png" data-lightbox aria-label="Enlarge the model architecture"><img src="assets/model.png" width="2800" height="1083" loading="lazy" alt="SpatialMind architecture with metric depth refinement, separate geometry and motion encoders, anchor time alignment, visual-geometry fusion, and progressive state-chain reasoning."></a>
+        <a class="figure-frame" href="model.png" data-lightbox aria-label="Enlarge the model architecture"><img src="model.png" width="2800" height="1083" loading="lazy" alt="SpatialMind architecture with metric depth refinement, separate geometry and motion encoders, anchor time alignment, visual-geometry fusion, and progressive state-chain reasoning."></a>
         <figcaption><strong>Model architecture.</strong> Global and local depth corrections, temporal geometry fusion, and structured reasoning connect video observations to metric spatial predictions.</figcaption>
       </figure>
       <dl class="method-details">
@@ -92,7 +92,7 @@
       <p class="section-intro">Driving scenes and everyday egocentric activities, organized into a common hierarchy of spatial reasoning.</p>
       <div class="dataset-stats"><div><strong>30,677</strong><span>Training QA pairs</span></div><div><strong>2,000</strong><span>Benchmark questions</span></div><div><strong>8</strong><span>Tasks across 3 levels</span></div></div>
       <figure class="figure-block">
-        <a class="figure-frame" href="assets/data-engine.png" data-lightbox aria-label="Enlarge the data engine"><img src="assets/data-engine.png" width="2800" height="1257" loading="lazy" alt="The SpatialMind data engine links target selection and verified entity descriptions to metric geometry, temporal spatial metadata, and question-answer generation across eight tasks."></a>
+        <a class="figure-frame" href="data-engine.png" data-lightbox aria-label="Enlarge the data engine"><img src="data-engine.png" width="2800" height="1257" loading="lazy" alt="The SpatialMind data engine links target selection and verified entity descriptions to metric geometry, temporal spatial metadata, and question-answer generation across eight tasks."></a>
         <figcaption><strong>SpatialMind data engine.</strong> A Select–Describe–Verify process grounds natural-language descriptions in metric geometry. Semantic propagation and temporal alignment support question generation and state-chain supervision from Waymo and Ego-Exo4D videos.</figcaption>
       </figure>
     </section>

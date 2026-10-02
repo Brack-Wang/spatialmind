@@ -20,6 +20,6 @@
 
 [Project Page](https://brack-wang.github.io/spatialmind/)
 
-![SpatialMind overview](assets/teaser.png)
+![SpatialMind overview](asset/teaser.png)
 
 </div>
