@@ -108,13 +108,67 @@
         <div id="panel-spatialmind" role="tabpanel" aria-labelledby="tab-spatialmind" tabindex="0">
           <div class="result-summary"><p><strong>52.65<span>%</span></strong> overall score</p><p><strong>+6.95<span> pp</span></strong> over Qwen3-VL-8B + SFT</p></div>
           <div class="table-scroll" tabindex="0" role="region" aria-label="SpatialMind-2K results, scroll horizontally for all tasks">
-            <table class="results-table"><caption>Selected results on SpatialMind-2K (%)</caption><thead><tr><th scope="col" rowspan="2">Model</th><th scope="col" rowspan="2">Overall</th><th scope="colgroup" colspan="2">L1 · Current state</th><th scope="colgroup" colspan="3">L2 · Observed dynamics</th><th scope="colgroup" colspan="3">L3 · Future prediction</th></tr><tr><th scope="col">Motion</th><th scope="col">Spatial</th><th scope="col">Ego dist.</th><th scope="col">Target dist.</th><th scope="col">Relative</th><th scope="col">Direction</th><th scope="col">Distance</th><th scope="col">Relation</th></tr></thead><tbody>
-              <tr><th scope="row">Qwen3-VL-8B</th><td>20.20</td><td>3.15</td><td>13.30</td><td>7.35</td><td>23.10</td><td>38.50</td><td>24.50</td><td>21.00</td><td>34.70</td></tr>
-              <tr><th scope="row">Qwen3-VL-8B + SFT</th><td>45.70</td><td>36.02</td><td>57.34</td><td>23.77</td><td>37.06</td><td>56.99</td><td>57.34</td><td>40.64</td><td>57.89</td></tr>
-              <tr class="ours"><th scope="row">SpatialMind</th><td>52.65</td><td>38.32</td><td>65.46</td><td>30.15</td><td>52.34</td><td>68.42</td><td>65.13</td><td>42.89</td><td>64.48</td></tr>
-            </tbody></table>
+            <table class="results-table benchmark-table" aria-describedby="benchmark-table-note">
+              <caption>Table 1. Results on SpatialMind-Benchmark (%)</caption>
+              <thead>
+                <tr><th scope="col" rowspan="2">Model</th><th scope="col" rowspan="2">Overall</th><th scope="colgroup" colspan="2">L1 · Current state</th><th scope="colgroup" colspan="3">L2 · Observed dynamics</th><th scope="colgroup" colspan="3">L3 · Future prediction</th></tr>
+                <tr><th scope="col">Motion</th><th scope="col">Spatial</th><th scope="col">Ego<br>distance</th><th scope="col">Object<br>distance</th><th scope="col">Relative<br>motion</th><th scope="col">Direction</th><th scope="col">Distance</th><th scope="col">Relation</th></tr>
+              </thead>
+              <tbody>
+                <tr class="model-group"><th colspan="10" scope="rowgroup"><span>Proprietary Models (API)</span></th></tr>
+                <tr><th scope="row">GPT-5.6 Luna</th><td>22.60</td><td>20.28</td><td>14.34</td><td>12.59</td><td>25.87</td><td>44.76</td><td>27.27</td><td>14.04</td><td>25.61</td></tr>
+                <tr><th scope="row">Claude Sonnet 5</th><td>27.80</td><td>16.43</td><td><strong>23.08</strong></td><td>9.79</td><td>26.57</td><td>49.30</td><td><span class="second-best">30.07</span></td><td>23.51</td><td><span class="second-best">44.21</span></td></tr>
+                <tr><th scope="row">Gemini 3.8 Flash</th><td><span class="second-best">30.19</span></td><td><span class="second-best">21.62</span></td><td><span class="second-best">18.66</span></td><td><span class="second-best">19.39</span></td><td><span class="second-best">49.65</span></td><td><span class="second-best">52.85</span></td><td>20.28</td><td><strong>41.34</strong></td><td>22.91</td></tr>
+                <tr><th scope="row">GPT-6-Astra (medium)</th><td><strong>39.00</strong></td><td><strong>38.46</strong></td><td>13.99</td><td><strong>19.58</strong></td><td><strong>51.75</strong></td><td><strong>73.78</strong></td><td><strong>39.86</strong></td><td><span class="second-best">29.12</span></td><td><strong>52.28</strong></td></tr>
+              </tbody>
+              <tbody>
+                <tr class="model-group"><th colspan="10" scope="rowgroup"><span>General-purpose VLMs</span></th></tr>
+                <tr><th scope="row">Qwen2.5-VL-3B</th><td>14.40</td><td><span class="second-best">5.95</span></td><td>5.25</td><td><strong>10.85</strong></td><td>2.80</td><td>32.20</td><td>28.70</td><td>17.85</td><td>13.00</td></tr>
+                <tr><th scope="row">Qwen3.5-9B</th><td>10.30</td><td><strong>10.85</strong></td><td>9.45</td><td>5.60</td><td>13.30</td><td>9.45</td><td>4.20</td><td><span class="second-best">20.35</span></td><td>8.05</td></tr>
+                <tr><th scope="row">LLaVA-NeXT-7B</th><td>14.40</td><td>5.25</td><td>6.65</td><td>5.95</td><td>7.00</td><td>30.10</td><td><span class="second-best">31.50</span></td><td>15.05</td><td>18.60</td></tr>
+                <tr><th scope="row">Qwen2.5-VL-7B</th><td>17.60</td><td>3.85</td><td><strong>17.15</strong></td><td>2.45</td><td><span class="second-best">30.80</span></td><td>33.60</td><td>25.90</td><td>10.15</td><td>27.70</td></tr>
+                <tr><th scope="row">Cosmos3-8B</th><td><span class="second-best">18.95</span></td><td>5.60</td><td>2.40</td><td><span class="second-best">9.80</span></td><td><strong>32.90</strong></td><td><span class="second-best">35.30</span></td><td><strong>32.20</strong></td><td>3.90</td><td><strong>43.20</strong></td></tr>
+                <tr><th scope="row">Qwen3-VL-8B</th><td><strong>20.20</strong></td><td>3.15</td><td><span class="second-best">13.30</span></td><td>7.35</td><td>23.10</td><td><strong>38.50</strong></td><td>24.50</td><td><strong>21.00</strong></td><td><span class="second-best">34.70</span></td></tr>
+              </tbody>
+              <tbody>
+                <tr class="model-group"><th colspan="10" scope="rowgroup"><span>Spatially specialized VLMs</span></th></tr>
+                <tr><th scope="row">SR-3D-8B</th><td>9.60</td><td>2.45</td><td>6.30</td><td><span class="second-best">12.60</span></td><td>2.10</td><td>24.85</td><td>14.70</td><td><span class="second-best">8.75</span></td><td>3.50</td></tr>
+                <tr><th scope="row">SpatialRGPT-8B</th><td>9.70</td><td>6.65</td><td>5.25</td><td>5.25</td><td>2.80</td><td>17.85</td><td><strong>34.30</strong></td><td>3.85</td><td>10.20</td></tr>
+                <tr><th scope="row">SpatialBot-3B</th><td>11.80</td><td>2.80</td><td>7.70</td><td>1.05</td><td><strong>34.30</strong></td><td>23.45</td><td>28.70</td><td>2.80</td><td>13.00</td></tr>
+                <tr><th scope="row">VLM-3R-7B</th><td>14.00</td><td><strong>7.90</strong></td><td>1.05</td><td>4.20</td><td>7.70</td><td>31.50</td><td>29.40</td><td>2.45</td><td><strong>32.65</strong></td></tr>
+                <tr><th scope="row">SpaceR-7B</th><td>14.70</td><td>5.60</td><td><strong>14.70</strong></td><td>5.25</td><td><span class="second-best">14.70</span></td><td><span class="second-best">33.25</span></td><td>21.70</td><td>3.50</td><td>22.45</td></tr>
+                <tr><th scope="row">ViLaSR-7B</th><td>14.80</td><td><span class="second-best">7.70</span></td><td>9.10</td><td>7.00</td><td>7.00</td><td>32.20</td><td>16.80</td><td>6.00</td><td><span class="second-best">30.15</span></td></tr>
+                <tr><th scope="row">SR-ReaL-8B</th><td>14.90</td><td>5.95</td><td>11.55</td><td>11.90</td><td>8.40</td><td>31.50</td><td><span class="second-best">32.20</span></td><td>7.05</td><td>16.15</td></tr>
+                <tr><th scope="row">4D-RGPT-8B</th><td><span class="second-best">15.40</span></td><td>3.50</td><td><span class="second-best">11.90</span></td><td><strong>12.95</strong></td><td>7.00</td><td><strong>33.95</strong></td><td>27.30</td><td><strong>12.25</strong></td><td>16.15</td></tr>
+                <tr><th scope="row">SpatialReasoner-7B</th><td><strong>15.80</strong></td><td>7.20</td><td>7.70</td><td>5.60</td><td>12.60</td><td><span class="second-best">33.25</span></td><td>30.10</td><td>8.40</td><td>27.00</td></tr>
+              </tbody>
+              <tbody>
+                <tr class="model-group"><th colspan="10" scope="rowgroup"><span>SFT on SpatialMind training data</span></th></tr>
+                <tr><th scope="row">Qwen3-VL-8B + SFT</th><td><span class="second-best">45.70</span></td><td><span class="second-best">36.02</span></td><td><span class="second-best">57.34</span></td><td><span class="second-best">23.77</span></td><td><span class="second-best">37.06</span></td><td><span class="second-best">56.99</span></td><td><span class="second-best">57.34</span></td><td><span class="second-best">40.64</span></td><td><span class="second-best">57.89</span></td></tr>
+                <tr class="ours"><th scope="row">SpatialMind (Ours)</th><td><strong>52.65</strong></td><td><strong>38.32</strong></td><td><strong>65.46</strong></td><td><strong>30.15</strong></td><td><strong>52.34</strong></td><td><strong>68.42</strong></td><td><strong>65.13</strong></td><td><strong>42.89</strong></td><td><strong>64.48</strong></td></tr>
+              </tbody>
+            </table>
           </div>
-          <p class="table-note">Numerical tasks use mean relative accuracy (MRA); multiple-choice tasks use accuracy (ACC), following the paper’s evaluation protocol.</p>
+          <p class="table-note" id="benchmark-table-note">Within each model group, <strong>bold</strong> marks the best result and <span class="second-best">underline</span> marks the second best. Numerical tasks use mean relative accuracy (MRA); multiple-choice tasks use accuracy (ACC).</p>
+          <p class="table-scroll-hint">Scroll horizontally to view all eight tasks.</p>
+          <section class="result-observations" aria-labelledby="observations-title">
+            <h3 id="observations-title">Three observations</h3>
+            <p class="observations-intro">Comparing model families on SpatialMind-Benchmark, from Section 5.1.</p>
+            <ol class="observation-list">
+              <li>
+                <h4>Proprietary Models</h4>
+                <p><strong>GPT-6-Astra (medium) leads by a clear margin</strong>, scoring 39.00% overall versus 30.19% for the next-best proprietary model. It leads on six of the eight tasks; the exceptions are current-state spatial estimation and future-distance prediction, both of which require absolute metric distances.</p>
+              </li>
+              <li>
+                <h4>General-Purpose Models</h4>
+                <p>General-purpose VLMs are stronger on categorical direction and relation questions than on metric estimation. Qwen3-VL-8B leads this group at 20.20% overall, but current-state measurements and ego-motion distance remain challenging. <strong>Correct future categories do not necessarily imply accurate metric understanding</strong> of the observed scene.</p>
+              </li>
+              <li>
+                <h4>Spatial Expert Models</h4>
+                <p>Spatial experts score 9.60–15.80% overall, with persistent weaknesses in current-state measurements, ego-motion distance, and future-distance prediction. <strong>Depth and 3D priors alone do not ensure reliable metric reasoning</strong> across outdoor driving and everyday egocentric scenes at different spatial scales.</p>
+              </li>
+            </ol>
+          </section>
         </div>
         <div id="panel-transfer" role="tabpanel" aria-labelledby="tab-transfer" tabindex="0" hidden>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Zero-shot transfer results">
