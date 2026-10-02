@@ -18,6 +18,8 @@
 
 **Coming soon.**
 
+[Project Page](https://brack-wang.github.io/spatialmind/)
+
 ![SpatialMind overview](assets/teaser.png)
 
 </div>
