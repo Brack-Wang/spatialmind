@@ -152,20 +152,28 @@
           <p class="table-note" id="benchmark-table-note">Within each model group, <strong>bold</strong> marks the best result and <span class="second-best">underline</span> marks the second best. Numerical tasks use mean relative accuracy (MRA); multiple-choice tasks use accuracy (ACC).</p>
           <p class="table-scroll-hint">Scroll horizontally to view all eight tasks.</p>
           <section class="result-observations" aria-labelledby="observations-title">
-            <h3 id="observations-title">Three observations</h3>
-            <p class="observations-intro">Comparing model families on SpatialMind-Benchmark, from Section 5.1.</p>
-            <ol class="observation-list">
-              <li>
-                <h4>Proprietary Models</h4>
-                <p><strong>GPT-6-Astra (medium) leads by a clear margin</strong>, scoring 39.00% overall versus 30.19% for the next-best proprietary model. It leads on six of the eight tasks; the exceptions are current-state spatial estimation and future-distance prediction, both of which require absolute metric distances.</p>
+            <div class="insights-heading"><p class="insights-kicker">A CLOSER LOOK · SECTION 5.1</p><h3 id="observations-title">Three observations</h3><p class="observations-intro">Different model families. A shared challenge: reasoning at real-world scale.</p></div>
+            <ol class="observation-list" role="list">
+              <li class="insight-card insight-tone-1">
+                <div class="insight-card-top"><span class="insight-category"><span class="insight-index">01</span>Proprietary Models</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19V13M12 19V8M19 19V3M3 21h18"/></svg></div>
+                <h4>Astra sets the pace.</h4>
+                <div class="insight-metric"><p class="insight-value">39.00<span>%</span></p><p class="insight-metric-label">GPT-6-Astra (medium) · Overall</p></div>
+                <p class="insight-copy">GPT-6-Astra leads proprietary models on <strong>six of eight tasks</strong>. The two exceptions are current-state spatial estimation and future-distance prediction, both requiring absolute metric distances.</p>
+                <p class="insight-footer"><span>Lead over the next-best proprietary model</span><strong>+8.81 percentage points</strong></p>
               </li>
-              <li>
-                <h4>General-Purpose Models</h4>
-                <p>General-purpose VLMs are stronger on categorical direction and relation questions than on metric estimation. Qwen3-VL-8B leads this group at 20.20% overall, but current-state measurements and ego-motion distance remain challenging. <strong>Correct future categories do not necessarily imply accurate metric understanding</strong> of the observed scene.</p>
+              <li class="insight-card insight-tone-2">
+                <div class="insight-card-top"><span class="insight-category"><span class="insight-index">02</span>General-Purpose Models</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="19" r="2.5"/><path d="M8 6h8M6.5 8.5l4 8M17.5 8.5l-4 8"/></svg></div>
+                <h4>Categories come easier.</h4>
+                <div class="insight-metric"><p class="insight-value">20.20<span>%</span></p><p class="insight-metric-label">Qwen3-VL-8B · Best overall in this group</p></div>
+                <p class="insight-copy">Direction and relation questions are easier than metric estimation. Current-state measurements and ego-motion distance remain challenging: <strong>categorical future accuracy does not establish metric understanding</strong>.</p>
+                <p class="insight-footer"><span>Key challenge</span><strong>Accurate metric estimation</strong></p>
               </li>
-              <li>
-                <h4>Spatial Expert Models</h4>
-                <p>Spatial experts score 9.60–15.80% overall, with persistent weaknesses in current-state measurements, ego-motion distance, and future-distance prediction. <strong>Depth and 3D priors alone do not ensure reliable metric reasoning</strong> across outdoor driving and everyday egocentric scenes at different spatial scales.</p>
+              <li class="insight-card insight-tone-3">
+                <div class="insight-card-top"><span class="insight-category"><span class="insight-index">03</span>Spatial Expert Models</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z M3 7l9 5 9-5M12 12v10M7.5 4.5l9 5"/></svg></div>
+                <h4>Geometry alone falls short.</h4>
+                <div class="insight-metric"><p class="insight-value insight-value-wide">9.60–15.80<span>%</span></p><p class="insight-metric-label">Overall range across spatial experts</p></div>
+                <p class="insight-copy">Depth and 3D priors still leave weaknesses in current-state measurements, ego-motion distance, and future-distance prediction. <strong>Geometric priors alone do not ensure metric accuracy</strong> across driving and egocentric scenes.</p>
+                <p class="insight-footer"><span>Key challenge</span><strong>Reasoning across spatial scales</strong></p>
               </li>
             </ol>
           </section>
@@ -179,6 +187,32 @@
             </tbody></table>
           </div>
           <p class="table-note">Each benchmark retains its original scoring convention. Scores across different benchmarks are not directly comparable.</p>
+          <section class="result-observations" aria-labelledby="transfer-observations-title">
+            <div class="insights-heading"><p class="insights-kicker">BEYOND OUR BENCHMARK · SECTION 5.2</p><h3 id="transfer-observations-title">What transfers to new scenes?</h3><p class="observations-intro">Three external benchmarks, evaluated without additional fine-tuning.</p></div>
+            <ol class="observation-list" role="list">
+              <li class="insight-card insight-tone-1">
+                <div class="insight-card-top"><span class="insight-category"><span class="insight-index">01</span>VSI-Bench</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19V13M12 19V8M19 19V3M3 21h18"/></svg></div>
+                <h4>Metric understanding transfers indoors.</h4>
+                <div class="insight-metric"><p class="insight-value">+4.4<span> pp</span></p><p class="insight-metric-label">Measurement gain over the best competitor</p></div>
+                <p class="insight-copy">SpatialMind leads measurement (<strong>52.1</strong>) and spatiotemporal reasoning (<strong>52.4</strong>) among the compared models, gaining 4.4 and 3.8 points, respectively. Overall performance remains competitive at 46.4.</p>
+                <p class="insight-footer"><span>Strongest results</span><strong>Measurement + spatiotemporal</strong></p>
+              </li>
+              <li class="insight-card insight-tone-2">
+                <div class="insight-card-top"><span class="insight-category"><span class="insight-index">02</span>OSI-Bench</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="19" r="2.5"/><path d="M8 6h8M6.5 8.5l4 8M17.5 8.5l-4 8"/></svg></div>
+                <h4>Stronger open-world spatial inference.</h4>
+                <div class="insight-metric"><p class="insight-value">+2.8<span> pp</span></p><p class="insight-metric-label">Overall gain over Qwen3-VL-32B</p></div>
+                <p class="insight-copy">SpatialMind achieves the highest overall (<strong>35.0</strong>) and static (<strong>30.2</strong>) scores among the compared models. Dynamic reasoning stays competitive at 33.4, versus 34.9 for Qwen3-VL-32B.</p>
+                <p class="insight-footer"><span>Strongest results</span><strong>Overall + static reasoning</strong></p>
+              </li>
+              <li class="insight-card insight-tone-3">
+                <div class="insight-card-top"><span class="insight-category"><span class="insight-index">03</span>VLM4D</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z M3 7l9 5 9-5M12 12v10M7.5 4.5l9 5"/></svg></div>
+                <h4>Motion reasoning across visual domains.</h4>
+                <div class="insight-metric"><p class="insight-value">+1.0<span> pp</span></p><p class="insight-metric-label">Overall gain over 4D-RGPT-8B</p></div>
+                <p class="insight-copy">SpatialMind leads overall at <strong>53.4</strong>, with the best scores on both real (<strong>53.5</strong>) and synthetic (<strong>52.9</strong>) videos among the compared models. The gains support transfer to motion and perspective understanding.</p>
+                <p class="insight-footer"><span>Strongest results</span><strong>Real + synthetic videos</strong></p>
+              </li>
+            </ol>
+          </section>
         </div>
       </div>
     </section>

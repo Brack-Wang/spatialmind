@@ -128,15 +128,31 @@ h2 { margin: 0; font: 400 clamp(28px, 3.6vw, 37px)/1.25 "DM Serif Display", Geor
 .benchmark-table strong { font-weight: 700; }
 .second-best { text-decoration: underline; text-underline-offset: 3px; }
 .table-scroll-hint { display: none; margin: 8px 0 0; font-size: 11px; text-align: center; color: var(--muted); }
-.result-observations { margin: 32px 0 10px; padding-top: 27px; border-top: 1px solid var(--line); }
-.result-observations h3 { margin: 0 0 5px; color: var(--ink); font-size: 19px; font-weight: 600; }
-.observations-intro { margin: 0 0 21px; color: var(--light); font-size: 12px; }
-.observation-list { list-style: none; counter-reset: observation; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin: 0; padding: 0; }
-.observation-list li { counter-increment: observation; }
-.observation-list li::before { content: "0" counter(observation); display: block; margin-bottom: 8px; color: var(--green); font-size: 11px; font-weight: 600; letter-spacing: 1.2px; }
-.observation-list h4 { margin: 0 0 9px; font-size: 14px; font-weight: 600; }
-.observation-list p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
-.observation-list strong { color: var(--ink); font-weight: 600; }
+.result-observations { margin: 34px 0 14px; padding-top: 30px; border-top: 1px solid var(--line); }
+.insights-heading { margin-bottom: 24px; }
+.insights-kicker { margin: 0 0 8px; color: var(--green); font-size: 9px; font-weight: 600; letter-spacing: 1.65px; }
+.result-observations h3 { margin: 0 0 9px; color: var(--ink); font: 400 29px/1.2 "DM Serif Display", Georgia, serif; letter-spacing: -.35px; }
+.observations-intro { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.observation-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; }
+.insight-card { --insight-accent: #126b55; --insight-tint: #eff8f3; --insight-line: #cce5d8; display: flex; flex-direction: column; min-width: 0; padding: 21px 20px 18px; border: 1px solid var(--insight-line); border-top: 3px solid var(--insight-accent); border-radius: 13px; background: linear-gradient(160deg, var(--insight-tint), #fff 75%); box-shadow: 0 4px 14px #22344706; }
+.insight-tone-2 { --insight-accent: #335f9e; --insight-tint: #f0f5fd; --insight-line: #d1def2; }
+.insight-tone-3 { --insight-accent: #98541c; --insight-tint: #fff6eb; --insight-line: #eedbc6; }
+.insight-card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; min-height: 26px; margin-bottom: 19px; color: var(--insight-accent); }
+.insight-category { display: flex; align-items: center; gap: 7px; font-size: 10px; font-weight: 600; line-height: 1.4; }
+.insight-index { display: inline-flex; flex-shrink: 0; justify-content: center; align-items: center; width: 25px; height: 25px; border: 1px solid var(--insight-line); border-radius: 7px; background: #ffffffb3; font-size: 9px; font-variant-numeric: tabular-nums; }
+.insight-card-top svg { width: 22px; height: 22px; flex-shrink: 0; opacity: .75; }
+.insight-card h4 { margin: 0 0 18px; min-height: 52px; color: var(--ink); font: 400 23px/1.18 "DM Serif Display", Georgia, serif; letter-spacing: -.25px; text-wrap: balance; }
+.insight-metric { min-height: 91px; margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--insight-line); }
+.insight-value { margin: 0 0 6px; color: var(--insight-accent); font: 400 43px/1.1 "DM Serif Display", Georgia, serif; letter-spacing: -1px; font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
+.insight-value span { font-size: 23px; letter-spacing: -.3px; }
+.insight-value-wide { font-size: 34px; line-height: 1.39; }
+.insight-value-wide span { font-size: 20px; }
+.insight-metric-label { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+.insight-copy { margin: 0 0 22px; color: var(--muted); font-size: 12px; line-height: 1.85; }
+.insight-copy strong { color: var(--ink); font-weight: 600; }
+.insight-footer { margin: auto 0 0; padding-top: 13px; border-top: 1px solid var(--insight-line); color: var(--insight-accent); font-size: 10px; line-height: 1.7; }
+.insight-footer span { display: block; margin-bottom: 2px; font-size: 9px; }
+.insight-footer strong { display: block; font-size: 11px; font-weight: 600; }
 @media (max-width: 1100px) {
   .table-scroll-hint { display: block; }
 }
@@ -164,6 +180,15 @@ dialog::backdrop { background: #14232cbd; backdrop-filter: blur(4px); }
 dialog img { max-height: calc(100dvh - 160px); width: 100%; object-fit: contain; }
 dialog > p { font-size: 12px; color: var(--muted); margin: 10px 0 0; }
 body.dialog-open { overflow: hidden; }
+@media (min-width: 761px) and (max-width: 1050px) {
+  .observation-list { gap: 12px; }
+  .insight-card { padding: 18px 14px 16px; }
+  .insight-card h4 { font-size: 21px; min-height: 75px; }
+  .insight-value { font-size: 37px; }
+  .insight-value-wide { font-size: 27px; line-height: 1.51; }
+  .insight-category { font-size: 9px; gap: 5px; }
+  .insight-card-top svg { display: none; }
+}
 @media (max-width: 760px) {
   .container { width: calc(100% - 32px); }
   .nav-shell { padding: 12px 16px; gap: 15px; }
@@ -188,9 +213,13 @@ body.dialog-open { overflow: hidden; }
   .method-details > div { grid-template-columns: 1fr; gap: 7px; padding: 17px 4px; }
   .section-intro { font-size: 14px; }
   .results-tabs { padding-inline: 16px; }
-  .observation-list { grid-template-columns: 1fr; gap: 22px; }
-  .observation-list li + li { padding-top: 20px; border-top: 1px solid var(--line); }
-  .result-observations { margin-top: 25px; }
+  .observation-list { grid-template-columns: 1fr; gap: 16px; }
+  .result-observations { margin-top: 25px; padding-top: 25px; }
+  .insight-card { padding: 23px; }
+  .insight-card h4 { min-height: 0; font-size: 25px; }
+  .insight-metric { min-height: 0; }
+  .insight-copy { font-size: 13px; }
+  .insight-metric-label, .insight-footer { font-size: 11px; }
   .benchmark-table thead th[rowspan]:first-child { width: 165px; }
   .citation-section { padding-bottom: 60px; }
 }
