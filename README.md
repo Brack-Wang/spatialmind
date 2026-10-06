@@ -10,12 +10,12 @@
   <a href="https://brack-wang.github.io/spatialmind/"><img src="https://img.shields.io/badge/Project-Page-1E5148?logo=github&amp;logoColor=white" alt="Project Page"></a>
 </p>
 
-[Feiran Wang](https://openreview.net/profile?id=~Feiran_Wang2)<sup>1,†</sup>,
-[Xiaoqi Wang](https://openreview.net/profile?id=~Xiaoqi_Wang2)<sup>2,‡</sup>,
-[Ziwei Li](https://openreview.net/profile?id=~Ziwei_Li3)<sup>2</sup>,
-[Wenbin He](https://openreview.net/profile?id=~Wenbin_He1)<sup>2</sup>,
-[Yan Yan](https://openreview.net/profile?id=~Yan_Yan6)<sup>1</sup>,
-[Liu Ren](https://openreview.net/profile?id=~Liu_Ren1)<sup>2</sup>
+[Feiran Wang](https://brack-wang.github.io/)<sup>1,†</sup>,
+[Xiaoqi Wang](https://scholar.google.com/citations?user=i__pLDEAAAAJ&hl=en)<sup>2,‡</sup>,
+[Ziwei Li](https://sites.google.com/view/ziwei-li/home?pli=1&authuser=0)<sup>2</sup>,
+[Wenbin He](https://hewenbin.github.io/)<sup>2</sup>,
+[Yan Yan](https://tomyan555.github.io/)<sup>1</sup>,
+[Liu Ren](https://www.liu-ren.com/)<sup>2</sup>
 
 <sup>1</sup> University of Illinois at Chicago &nbsp;&nbsp; <sup>2</sup> Bosch
 
