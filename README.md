@@ -7,6 +7,7 @@
 
 <p>
   <a href="https://arxiv.org/pdf/2610.04139"><img src="https://img.shields.io/badge/Paper-arXiv%3A2610.04139-B31B1B?logo=arxiv&amp;logoColor=white" alt="Paper on arXiv"></a>
+  <a href="https://brack-wang.github.io/spatialmind/"><img src="https://img.shields.io/badge/Project-Page-1E5148?logo=github&amp;logoColor=white" alt="Project Page"></a>
 </p>
 
 [Feiran Wang](https://openreview.net/profile?id=~Feiran_Wang2)<sup>1,†</sup>,
@@ -21,8 +22,6 @@
 <sup>†</sup> This work was done during an internship at Bosch. &nbsp;&nbsp; <sup>‡</sup> Project lead.
 
 **Code & data coming soon.**
-
-[Project Page](https://brack-wang.github.io/spatialmind/)
 
 ![SpatialMind overview](asset/teaser.png)
 
